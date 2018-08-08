@@ -1,0 +1,19 @@
+private void button1_Click(object sender, EventArgs e)
+        {
+            // menampilkan hasil dari fungis terbilang ke textbox 2 berdasarkan angka dari textbox 1
+            if (txt1.Text == "" || txt2.Text == "")
+            {
+                MessageBox.Show("Textbox Masih Ada Yang kosong", "Hati - Hati", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt1.Focus();
+            }
+            else
+            {
+                int a, b, c;
+
+                a = int.Parse(this.txt1.Text);
+                b = int.Parse(this.txt2.Text);
+                c = a + b;
+                this.hasil.Text = Convert.ToString(c);
+                bilang.Text = this.terbilang(Convert.ToInt32(c)).TrimStart();
+            }
+        }
